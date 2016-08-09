@@ -58,7 +58,7 @@ class Menu
 
 
         /// for choosing speed
-        std::array<sf::Text,9> speedLevels;
+        std::array<sf::Text,3> speedLevels;
 
         sf::Vector2i mousePosition; ///relative to window
 
