@@ -48,7 +48,7 @@ Game::Game()
     : gameWindow(sf::VideoMode(WINDOW_WIDTH,WINDOW_HEIGHT),WINDOW_TITLE), gameWorm(), gameMenu(), gameFood(),
       gameWall()
 {
-    gameWindow.setFramerateLimit(DEFAULT_FPS);
+    gameWindow.setFramerateLimit(MAXIMUM_FPS);
 }
 
 void Game::run()
@@ -73,8 +73,8 @@ void Game::initializeGame()
     reinitializeGameFood();
     gameFood.reset();
     gameWorm.reset();
-    /// speed*5, max of 45 fps for gamespeed.
-    gameWindow.setFramerateLimit((static_cast<int>(gameSpeed)+1)*5);
+    /// speed*7, max of 45 fps for gamespeed.
+    gameWindow.setFramerateLimit((static_cast<int>(gameSpeed)+1)*15);
 }
 
 void Game::reinitializeGameFood()
@@ -90,7 +90,7 @@ void Game::reinitializeGameFood()
         ///avoid food to spawn in snake and wall position
     }
 }
-
+#include <iostream>
 void Game::eventHandler(sf::Event e)
 {
     if ( e.type == sf::Event::Closed )
