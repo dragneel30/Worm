@@ -73,7 +73,7 @@ void Game::initializeGame()
     reinitializeGameFood();
     gameFood.reset();
     gameWorm.reset();
-    /// speed*7, max of 45 fps for gamespeed.
+    /// speed*15, max of 45 fps for gamespeed.
     gameWindow.setFramerateLimit((static_cast<int>(gameSpeed)+1)*15);
 }
 
