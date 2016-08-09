@@ -26,6 +26,7 @@ class Worm : public Entity
         static const dir defaultDir = LEFT;
         static const int defaultTailSize = 10;
         dir newDir;
+        dir processedDir;
         std::vector<Tail> tails;
         sf::Vector2f headPos;
         void processMove(sf::Vector2f newHeadPos);
